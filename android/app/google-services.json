@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "2728196812",
+    "project_id": "esric-d79ba",
+    "storage_bucket": "esric-d79ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2728196812:android:2568389e4cd618959ce069",
+        "android_client_info": {
+          "package_name": "com.hopemat.esric"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2728196812-4lgp7d5pqps25br719m8o2gjufhd1j04.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hopemat.esric",
+            "certificate_hash": "bf5d6949a8704a3fd3dfec530109af6cc4310074"
+          }
+        },
+        {
+          "client_id": "2728196812-ai8f87andea07qcvfmt6tvbi25v0bn4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hopemat.esric",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "2728196812-b91fvu9decjtsmuvd7oh19vq0qmin4rl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-_mGh-mbK7GsxxqEUMTFX7vx7bxL3uTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2728196812-b91fvu9decjtsmuvd7oh19vq0qmin4rl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "2728196812-jannn41i3catleu54jq17hgf2g8mk3l3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hopemat.esric"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2728196812:android:68ca4f81c4bc7c149ce069",
+        "android_client_info": {
+          "package_name": "com.hopemat.esricadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2728196812-768ognhs9dvhmbi86lfsitlfuf3f259f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hopemat.esricadmin",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "2728196812-b91fvu9decjtsmuvd7oh19vq0qmin4rl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-_mGh-mbK7GsxxqEUMTFX7vx7bxL3uTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2728196812-b91fvu9decjtsmuvd7oh19vq0qmin4rl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "2728196812-jannn41i3catleu54jq17hgf2g8mk3l3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hopemat.esric"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
