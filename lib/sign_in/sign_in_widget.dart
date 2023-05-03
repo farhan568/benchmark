@@ -316,16 +316,22 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          final email = _model
-                                              .emailAddressController.text
-                                              .trim();
-                                          final password = _model
-                                              .passwordController.text
-                                              .trim();
-                                          FirebaseAuthManager authManager =
-                                              FirebaseAuthManager();
-                                          authManager.signInWithEmail(
-                                              context, email, password);
+                                          try {
+                                            final email = _model
+                                                .emailAddressController.text
+                                                .trim();
+                                            final password = _model
+                                                .passwordController.text
+                                                .trim();
+                                            FirebaseAuthManager authManager =
+                                                FirebaseAuthManager();
+                                          await  authManager.signInWithEmail(
+                                                context, email, password);
+                                                context.pushNamed('homePage');
+                                          }  catch (e) {
+                                            debugPrint(e.toString());
+                                            // TODO
+                                          }
                                           // if (cardActiveUsersTblUsersRowList
                                           //         .first.email ==
                                           //     _model.emailAddressController

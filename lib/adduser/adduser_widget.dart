@@ -25,7 +25,6 @@ class _AdduserWidgetState extends State<AdduserWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AdduserModel());
-
     _model.yourNameController ??= TextEditingController();
     _model.emailController ??= TextEditingController();
     _model.phoneController ??= TextEditingController();

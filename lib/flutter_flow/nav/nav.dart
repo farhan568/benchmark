@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
+import '../../add_product/add_product_widget.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
 import '/backend/supabase/supabase.dart';
@@ -141,7 +142,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'settings',
               path: 'settings',
               builder: (context, params) => SettingsWidget(),
-            )
+            ),
+            FFRoute(
+              name: 'addproduct',
+              path: 'addproduct',
+              builder: (context, params) => AddProductWidget(),
+            ),
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
