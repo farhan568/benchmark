@@ -392,7 +392,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                                         );
                                         return;
                                       }
-
                                       final user = await authManager
                                           .createAccountWithEmail(
                                         context,
@@ -402,7 +401,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                                       if (user == null) {
                                         return;
                                       }
-
                                       context.pushNamedAuth('signIn', mounted);
                                     },
                                     child: Container(
