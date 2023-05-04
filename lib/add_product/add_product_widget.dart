@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker_web/image_picker_web.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebasestorage;
-
 import '/components/side_bar_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'add_product_model.dart';
-
 export 'add_product_model.dart';
+
 
 class AddProductWidget extends StatefulWidget {
   const AddProductWidget({Key? key}) : super(key: key);
@@ -506,7 +504,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
         brand: _model.brandController.text,
         description: _model.descriptionController.text,
         imageUrl: "",
-        price: price);
+        price: 0);
 
     await collectionRef.set(model.toMap());
     ScaffoldMessenger.of(context).showSnackBar(
@@ -519,26 +517,24 @@ class _AddProductWidgetState extends State<AddProductWidget> {
     context.pushNamed('homePage');
   }
 
-  static Future<String> uploadGigPic(Uint8List file ) async {
-    try {
-      final firebasestorage.FirebaseStorage _storage =
-          firebasestorage.FirebaseStorage.instance;
-      var uid = FirebaseAuth.instance.currentUser!.uid;
-
-      int mills = DateTime.now().millisecondsSinceEpoch;
-      String mils = '$mills';
-      var reference = _storage.ref().child("gigImages").child(uid).child(mils);
-      var r = await reference.putData(file,SettableMetadata(contentType: 'image/jpeg'));
-      if (r.state == firebasestorage.TaskState.success) {
-        String url = await reference.getDownloadURL();
-        return url;
-      } else {
-        throw PlatformException(code: "404", message: "no download link found");
-      }
-    } catch (e) {
-      rethrow;
-    }
-  }
-
-
+// static Future<String> uploadGigPic(Uint8List file ) async {
+//   try {
+//     final firebasestorage.FirebaseStorage _storage =
+//         firebasestorage.FirebaseStorage.instance;
+//     var uid = FirebaseAuth.instance.currentUser!.uid;
+//
+//     int mills = DateTime.now().millisecondsSinceEpoch;
+//     String mils = '$mills';
+//     var reference = _storage.ref().child("gigImages").child(uid).child(mils);
+//     var r = await reference.putData(file,SettableMetadata(contentType: 'image/jpeg'));
+//     if (r.state == firebasestorage.TaskState.success) {
+//       String url = await reference.getDownloadURL();
+//       return url;
+//     } else {
+//       throw PlatformException(code: "404", message: "no download link found");
+//     }
+//   } catch (e) {
+//     rethrow;
+//   }
+// }
 }

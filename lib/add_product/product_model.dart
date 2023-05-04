@@ -5,6 +5,8 @@ class ProductModel {
   late String imageUrl;
   late String brand;
   late double price;
+  late String categoryId;
+  late String subCategoryId;
 
   ProductModel({
     required this.id,
